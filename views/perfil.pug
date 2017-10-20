@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .contenedor
+    .informacion
+      .imagen
+        img(src="../img/perfil.jpg")
+      .usuario
+        p NOMBRE USUARIO
+        a(href="#") *
+      .cancion
+        p ULTIMA CANCION
+    .contenido
+      .descripcion
+        h3 Descripcion
+        p Texto de la descripcion
+      .contenidoPerfil
+        .top
+          h4 Top Canciones
+          ul
+            for item in top
+              li
+                a(href="#")= item
+        .playlist
+          h4 PlayLists
+          ul
+            for item in playlist
+              li
+                a(href="#")= item
+
+
+
+

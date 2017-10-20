@@ -1,0 +1,138 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+body
+  width: 80%
+  margin: auto
+  font-size: 2vw
+  font-family: Ubuntu, serif
+  background: #ebebeb
+
+a
+  color: #fff
+  text-decoration: none
+
+nav
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+
+  & ul
+    list-style-type: none
+    display: flex
+    & li
+      display: flex
+      flex: 1
+      & a
+        text-align: center
+        flex: 1
+        background: #1f3bd6
+        padding: 1rem
+
+        transition: background 0.8s
+
+        &.active
+          background: #0000b1
+        &:hover
+          background: #0000d0
+
+
+
+h1
+  text-align: center
+
+
+
+
+
+/*--- PERFIL -----*/
+.contenedor
+
+
+  & .informacion
+    padding-top: 1rem
+    width: 100%
+    overflow: auto
+    background: #ffffff
+
+    box-shadow: 0 0 30px grey
+    border-radius: 0 0 20px 20px
+    & .usuario , .cancion
+      margin: 1rem 0
+      & p
+      font-size: 3vw
+    & .imagen
+      width: 25%
+      float: left
+      text-align: center
+
+      padding: 0 0.7rem 0.7rem 0.7rem
+      & img
+        width: 70%
+    & .usuario
+      float: left
+      width: 75%
+      & p
+        width: 75%
+        float: left
+        text-align: center
+      & a
+        text-align: center
+        float: left
+        width: 25%
+        color: #000
+        &:hover
+          color: blue
+    & .cancion
+      float: left
+      width: 75%
+      & p
+        text-align: center
+
+  & .contenido
+    margin: 1.5rem auto 10rem auto
+
+    background: #ffffff
+    padding: 1rem
+    & .descripcion
+      & p
+        font-size: 3.5vw
+
+    & .top , .playlist
+      margin-top: 1rem
+
+      h4
+        text-align: center
+      & ul
+
+        list-style-type: none
+        background: #dddddd
+        & li
+          display: flex
+          flex-direction: column
+          & a
+            flex: 1
+            width: 100%
+            padding: 0.4rem
+            text-align: center
+            color: #000
+
+            transition: background 0.8s
+            &:hover
+              background: #c3c3c3
+
+
+
+
+@media all and (max-width: 650px)
+  body
+    font-size: 5.5vw
+    width: 100%
+  .contenedor .informacion .usuario , .contenedor .informacion .cancion
+    padding: 2% 0
+    margin: 0
+    & p
+      font-size: 5.5vw
+
