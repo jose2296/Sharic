@@ -59,4 +59,6 @@ router.get('/Generos', function(req, res, next) {
 router.get('/Chats', function(req, res, next) {
     res.render('chats', { titulo: 'Chats', pagina: 'Chats' });
 });
+
+
 module.exports = router;

@@ -10,15 +10,5 @@ html
     link(rel="stylesheet" href="/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css")
     meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
   body
-    nav
-      ul
-        - var icons = ['home', 'user', 'music',"comment"]
-        for item,i in ['Inicio', 'Perfil', 'Generos',"Chats"]
-          li
-            if pagina === item
-              a(href='/'+item class="active")
-                span(class="fa fa-"+icons[i])
-            else
-              a(href="/"+item class="")
-                span(class="fa fa-"+icons[i])
+    include nav
     block content
