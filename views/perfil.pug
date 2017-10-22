@@ -1,28 +1,32 @@
 extends layout
 
 block content
-  .contenedor
+  .contenedorPerfil
     .informacion
       .imagen
-        img(src="../img/perfil.jpg")
+        img(src="../img/perfil2.png")
       .usuario
         p NOMBRE USUARIO
-        a(href="#") *
       .cancion
         p ULTIMA CANCION
+
+      a(href="/Perfil/Ajustes")
+        span(class="fa fa-cog")
     .contenido
       .descripcion
         h3 Descripcion
         p Texto de la descripcion
       .contenidoPerfil
         .top
-          h4 Top Canciones
+          h4
+            a(href="/Perfil/Top-Canciones") Top Canciones
           ul
             for item in top
               li
                 a(href="#")= item
         .playlist
-          h4 PlayLists
+          h4
+            a(href="/Perfil/PlayList") PlayList
           ul
             for item in playlist
               li

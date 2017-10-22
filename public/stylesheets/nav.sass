@@ -1,0 +1,25 @@
+nav
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+
+  & ul
+    list-style-type: none
+    display: flex
+    & li
+      display: flex
+      flex: 1
+      & a
+        text-align: center
+        flex: 1
+        background: #1f3bd6
+        padding: 1rem
+
+        transition: background 0.8s
+
+        &.active
+          background: #0000b1
+        &:hover
+          background: #0000d0
+
