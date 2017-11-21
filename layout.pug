@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= titulo
+    link(rel='stylesheet', href='/stylesheets/estilos-comun.css')
+    link(rel='stylesheet', href='/stylesheets/nav.css')
+    link(rel='stylesheet', href='/stylesheets/perfil.css')
+    link(rel='stylesheet', href='/stylesheets/ajustes.css')
+    link(href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet")
+    link(rel="stylesheet" href="/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css")
+    meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+  body
+    include nav
+    block content

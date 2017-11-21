@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .contenedorAjustes
+    header
+      .atras
+        p
+          a(href="/Perfil") Atras
+      h2= pagina
+    .contenido
+      ul
+        for item in ["PlayList1","PlayList2","PlayList3","PlayList4","PlayList5","PlayList6"]
+          li
+            a(href="#")= item
+
+
+
+

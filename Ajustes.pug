@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .contenedorAjustes
+    header
+      .atras
+        p
+          a(href="/Perfil") Atras
+      h1= pagina
+    .contenido
+      ul
+        for item in ["Opcion1","Opcion2","Opcion3","Opcion4","Opcion5","Opcion6"]
+          li
+            a(href="/Perfil/Ajustes/"+item)= item
+
+
+
+
