@@ -1,10 +1,16 @@
 var express = require('express');
+var firebase = require('firebase');
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('inicio', { titulo: 'Inicio', pagina: 'Inicio' });
 });
+
+router.get('/Login', function(req, res, next) {
+    res.render('Login', { titulo: 'login', pagina: 'login' });
+});
+
 
 router.get('/Inicio', function(req, res, next) {
     res.render('inicio', { titulo: 'Inicio', pagina: 'Inicio' });
@@ -58,6 +64,27 @@ router.get('/Generos', function(req, res, next) {
 
 router.get('/Chats', function(req, res, next) {
     res.render('chats', { titulo: 'Chats', pagina: 'Chats' });
+});
+
+
+router.get('/Registro', function(req, res, next) {
+    res.render('registro', { titulo: 'Chats', pagina: 'Chats' });
+});
+
+
+router.post('/registro',function(req, res, next) {
+
+    console.log(req.body)
+    var usuarios = firebase.database().ref("usuarios/");
+    
+    usuarios.push({
+            "nombre": req.body.user,
+            "password": req.body.password
+        });
+    //res.render('Login', { titulo: 'Login', pagina: 'Login' });
+
+
+
 });
 
 

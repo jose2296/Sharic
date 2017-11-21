@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  form(action="login2" method="post")
+    input(type="text" name="user")
+    br
+    input(type="password" name="password") 
+    br
+    input(type="submit" value="Enviar" name="enviar")
+
+
+
+
+
+  script.
+    onsubmit = function(){
+      console.log("asdasd")
+    } 

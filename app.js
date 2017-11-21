@@ -11,6 +11,22 @@ var users = require('./routes/users');
 
 var app = express();
 
+var firebase = require("firebase");
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyC5ouRHubv0yrN21gyR4F8EYkXbKaIGnxE",
+  authDomain: "sharic1-a4df6.firebaseapp.com",
+  databaseURL: "https://sharic1-a4df6.firebaseio.com",
+  projectId: "sharic1-a4df6",
+  storageBucket: "sharic1-a4df6.appspot.com",
+  messagingSenderId: "225171417559"
+};
+firebase.initializeApp(config);
+
+
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -19,7 +35,7 @@ app.set('view engine', 'pug');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
